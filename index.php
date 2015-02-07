@@ -19,7 +19,7 @@
                 <div class="col-md-12">
                   <div class="carousel-content">
                     <h2 class="animated fadeInUpBig text-center text-black">Hello</h2>
-                      <p class="animated rollIn text-black text-center"><span class="text900">Welcome to Otaku Shop</span> an awesome anime shop that is, <br> built with <i class="fa fa-heart-o"></i> for <span class="text900">lovers.</span><br><br> <a href="#" class="btn btn-black btn-lg">Get Started</a></p>  
+                      <p class="animated rollIn text-black text-center"><span class="text900">Welcome to Otaku Shop Website</span> an awesome anime shop that is, <br> built with <i class="fa fa-heart-o"></i> for <span class="text900">lovers.</span><br><br> <a href="#" class="btn btn-black btn-lg">Get Started</a></p>  
                   </div>
                 </div> 
               </div>
@@ -30,8 +30,8 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="carousel-content">
-                  	<h3 class="animated fadeInLeftBig text-left">.Built</h3>
-					<p class="animated fadeInDownBig text-left">Your own online shop using this catalog theme.<br> Simple and easy cutomize just $12.</p>
+                  	<h3 class="animated fadeInLeftBig text-left">.Otaku</h3>
+					<p class="animated fadeInDownBig text-left">is a Japanese term for people with obsessive interests,<br> commonly the anime and manga fandom.</p>
 					<a class="btn btn-black btn-lg animated fadeInRight" href="#">Learn more &raquo;</a>
                   </div>
                 </div>
@@ -56,7 +56,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Hello There, This is 'Otaku Shop' Themes</h2>
+					<h2>Hello There, This is 'Otaku Shop Website'</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque. Sed pharetra nibh eget orci convallis at posuere leo convallis. Sed blandit augue vitae augue scelerisque bibendum.</p>
 				</div>
 			</div>
@@ -81,7 +81,7 @@
 						<div class="featured-photos">
 							<i class="fa fa-gift"></i>
 						</div>
-						<h3>the chairman</h3>
+						<h3>gift</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>
 					</div>
 				</div>
@@ -90,7 +90,7 @@
 						<div class="featured-photos">
 							<i class="fa fa-heart-o"></i>
 						</div>
-						<h3>the vice chairman</h3>
+						<h3>costumes manufacture</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>
 					</div>
 				</div>
@@ -99,7 +99,7 @@
 						<div class="featured-photos">
 							<i class="fa fa-flag"></i>
 						</div>
-						<h3>the treasurer</h3>
+						<h3>anime merchandises</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>
 					</div>
 				</div>
@@ -115,7 +115,7 @@
 				<div class="col-md-12">
 					<div class="heading-title">
 						<h2>Most Wanted</h2>
-						<p>The best of the best item most wanted in 2013</p>
+						<p>The best of the best item most wanted in 2015</p>
 					</div>	
 				</div>
 			</div>
@@ -124,8 +124,8 @@
 					<div class="thumbnail">
 					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
 					  <div class="caption-details">
-						<h3>Border Canary</h3>
-						<span class="price">$200</span>
+						<h3>Accessories</h3>
+						<span class="price">P200</span>
 					  </div>
 					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
 					</div>
@@ -134,8 +134,8 @@
 					<div class="thumbnail">
 					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
 					  <div class="caption-details">
-						<h3>Border Canary</h3>
-						<span class="price">$200</span>
+						<h3>Accessories</h3>
+						<span class="price">P200</span>
 					  </div>
 					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
 					</div>
@@ -144,8 +144,8 @@
 					<div class="thumbnail">
 					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
 					  <div class="caption-details">
-						<h3>Border Canary</h3>
-						<span class="price">$200</span>
+						<h3>Accessories</h3>
+						<span class="price">P200</span>
 					  </div>
 					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
 					</div>
@@ -154,8 +154,8 @@
 					<div class="thumbnail">
 					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
 					  <div class="caption-details">
-						<h3>Border Canary</h3>
-						<span class="price">$200</span>
+						<h3>Accessories</h3>
+						<span class="price">P200</span>
 					  </div>
 					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
 					</div>
@@ -164,8 +164,8 @@
 					<div class="thumbnail">
 					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
 					  <div class="caption-details">
-						<h3>Border Canary</h3>
-						<span class="price">$200</span>
+						<h3>Accessories</h3>
+						<span class="price">P200</span>
 					  </div>
 					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
 					</div>
@@ -174,8 +174,8 @@
 					<div class="thumbnail">
 					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
 					  <div class="caption-details">
-						<h3>Border Canary</h3>
-						<span class="price">$200</span>
+						<h3>Accessories</h3>
+						<span class="price">P200</span>
 					  </div>
 					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
 					</div>
@@ -184,8 +184,8 @@
 					<div class="thumbnail">
 					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
 					  <div class="caption-details">
-						<h3>Border Canary</h3>
-						<span class="price">$200</span>
+						<h3>Accessories</h3>
+						<span class="price">P200</span>
 					  </div>
 					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
 					</div>
@@ -194,8 +194,8 @@
 					<div class="thumbnail">
 					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
 					  <div class="caption-details">
-						<h3>Border Canary</h3>
-						<span class="price">$200</span>
+						<h3>Accessories</h3>
+						<span class="price">P200</span>
 					  </div>
 					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
 					</div>
@@ -257,7 +257,7 @@
 						<div class="blog-date">
 							<i class="fa fa-calendar"></i>
 							<span class="meta-date">26</span>
-							<span class="meta-month-year">MAR 2014</span>
+							<span class="meta-month-year">JAN 2015</span>
 						</div>
 						<h3><a href="single.php">the post title</a></h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>
@@ -269,7 +269,7 @@
 						<div class="blog-date">
 							<i class="fa fa-calendar"></i>
 							<span class="meta-date">03</span>
-							<span class="meta-month-year">FEB 2014</span>
+							<span class="meta-month-year">DEC 2014</span>
 						</div>
 						<h3><a href="single.php">the post title</a></h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>
@@ -281,7 +281,7 @@
 						<div class="blog-date">
 							<i class="fa fa-calendar"></i>
 							<span class="meta-date">19</span>
-							<span class="meta-month-year">JAN 2014</span>
+							<span class="meta-month-year">NOV 2014</span>
 						</div>
 						<h3><a href="single.php">the post title</a></h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>

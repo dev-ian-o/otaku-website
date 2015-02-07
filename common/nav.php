@@ -22,14 +22,17 @@
 			<a href="index.php" class="logo visible-lg visible-md"><img src="assets/img/logo.png" alt="Otaku Shop responsive catalog themes"></a>
 			<div id="brand" class="visible-lg visible-md">&nbsp;</div>
 			<ul class="nav navbar-nav nav-right">
-			  <li <?php if(isset($_GET['page'])) if($_GET['page']=="pricing") echo 'class="active"';?>><a href="pricing.php?page=pricing">Price</a></li>
-			  <li <?php if(isset($_GET['page'])) if($_GET['page']=="order") echo 'class="active"';?>><a href="order.php?page=order">Order</a></li>
+			  <!-- <li <?php if(isset($_GET['page'])) if($_GET['page']=="pricing") echo 'class="active"';?>><a href="pricing.php?page=pricing">Price</a></li> -->
+			  <!-- <li <?php if(isset($_GET['page'])) if($_GET['page']=="order") echo 'class="active"';?>><a href="order.php?page=order">Order</a></li> -->
 			  <li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
 				<ul class="dropdown-menu">
-				  <li><a href="product.php">Canary</a></li>
-				  <li><a href="product.php">Emprit</a></li>
-				  <li>
+				  <li><a href="product.php">Accessories</a></li>
+				  <li><a href="product.php">Collectibles</a></li>
+				  <li><a href="product.php">Costumes</a></li>
+				  <li><a href="product.php">Personal Items</a></li>
+				  <li><a href="product.php">Toys</a></li>
+				  <!-- <li>
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Doro <i class="fa fa-caret-down icon-dropdown"></i></a>
 					<ul class="dropdown-menu sub-menu">
 					  <li><a href="product.php">Accessories</a></li>
@@ -38,13 +41,13 @@
 					  <li><a href="product.php">Personal Items</a></li>
 					  <li><a href="product.php">Toys</a></li>
 					</ul>
-				  </li>
-	<!-- 			  <li class="divider"></li>
+				  </li> -->
+<!-- 				  <li class="divider"></li>
 				  <li><a href="product.php">Pitik</a></li>
 				  <li><a href="product.php">Cucak Rowo</a></li> -->
 				</ul>
 			  </li>
-			  <li class="dropdown">
+<!-- 			  <li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 				  <li><a href="blog.php">Blog 1</a></li>
@@ -52,7 +55,7 @@
 				  <li><a href="single.php">Single 1</a></li>
 				  <li><a href="single2.php">Single 2</a></li>
 				</ul>
-			  </li>
+			  </li> -->
 			</ul>
           
         </div><!-- /.navbar-collapse -->

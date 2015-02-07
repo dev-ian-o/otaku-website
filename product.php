@@ -31,15 +31,15 @@
 			
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Border Canary</h2>
-					<p>Display all item with category Border Canary</p>
+					<h2>Accessories</h2>
+					<p>Display all item with category Accessories</p>
 					<ul class="thumbnails">
 					  <li class="col-md-3 col-sm-3">
 						<div class="thumbnail">
 						  <a href="detail.php"><img src="assets/img/manuk.jpg" class="img-responsive" alt="product Otaku Shop" /></a>
 						  <div class="caption-details">
-							<h3>Border Canary</h3>
-							<span class="price">$200</span>
+							<h3>Accessories</h3>
+							<span class="price">P200</span>
 						  </div>
 						</div>
 					  </li>
@@ -47,8 +47,8 @@
 						<div class="thumbnail">
 						  <a href="detail.php"><img src="assets/img/manuk.jpg" class="img-responsive" alt="product Otaku Shop" /></a>
 						  <div class="caption-details">
-							<h3>Border Canary</h3>
-							<span class="price">$200</span>
+							<h3>Accessories</h3>
+							<span class="price">P200</span>
 						  </div>
 						</div>
 					  </li>
@@ -56,8 +56,8 @@
 						<div class="thumbnail">
 						  <a href="detail.php"><img src="assets/img/manuk.jpg" class="img-responsive" alt="product Otaku Shop" /></a>
 						  <div class="caption-details">
-							<h3>Border Canary</h3>
-							<span class="price">$200</span>
+							<h3>Accessories</h3>
+							<span class="price">P200</span>
 						  </div>
 						</div>
 					  </li>
@@ -65,8 +65,8 @@
 						<div class="thumbnail">
 						  <a href="detail.php"><img src="assets/img/manuk.jpg" class="img-responsive" alt="product Otaku Shop" /></a>
 						  <div class="caption-details">
-							<h3>Border Canary</h3>
-							<span class="price">$200</span>
+							<h3>Accessories</h3>
+							<span class="price">P200</span>
 						  </div>
 						</div>
 					  </li>
@@ -74,8 +74,8 @@
 						<div class="thumbnail">
 						  <a href="detail.php"><img src="assets/img/manuk.jpg" class="img-responsive" alt="product Otaku Shop" /></a>
 						  <div class="caption-details">
-							<h3>Border Canary</h3>
-							<span class="price">$200</span>
+							<h3>Accessories</h3>
+							<span class="price">P200</span>
 						  </div>
 						</div>
 					  </li>
@@ -83,8 +83,8 @@
 						<div class="thumbnail">
 						  <a href="detail.php"><img src="assets/img/manuk.jpg" class="img-responsive" alt="product Otaku Shop" /></a>
 						  <div class="caption-details">
-							<h3>Border Canary</h3>
-							<span class="price">$200</span>
+							<h3>Accessories</h3>
+							<span class="price">P200</span>
 						  </div>
 						</div>
 					  </li>
@@ -92,8 +92,8 @@
 						<div class="thumbnail">
 						  <a href="detail.php"><img src="assets/img/manuk.jpg" class="img-responsive" alt="product Otaku Shop" /></a>
 						  <div class="caption-details">
-							<h3>Border Canary</h3>
-							<span class="price">$200</span>
+							<h3>Accessories</h3>
+							<span class="price">P200</span>
 						  </div>
 						</div>
 					  </li>
@@ -101,8 +101,8 @@
 						<div class="thumbnail">
 						  <a href="detail.php"><img src="assets/img/manuk.jpg" class="img-responsive" alt="product Otaku Shop" /></a>
 						  <div class="caption-details">
-							<h3>Border Canary</h3>
-							<span class="price">$200</span>
+							<h3>Accessories</h3>
+							<span class="price">P200</span>
 						  </div>
 						</div>
 					  </li>

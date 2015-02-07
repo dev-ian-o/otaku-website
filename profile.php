@@ -40,32 +40,53 @@
 				<div class="col-md-4 col-sm-4">
 					<div class="team-container">
 						<div class="featured-photos">
-							<img src="assets/img/team3.png" class="img-responsive img-rounded" alt="chandra noor rachman">
+							<img src="assets/img/c-ombao.jpg" class="img-responsive img-rounded" alt="chandra noor rachman">
 						</div>
-						<h3>graphic designer</h3>
+						<h3>CFO</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<div class="team-container">
 						<div class="featured-photos">
-							<img src="assets/img/team2.png" class="img-responsive img-rounded" alt="dimas angger dwi purna">
+							<img src="assets/img/c-olinares.png" class="img-responsive img-rounded" alt="dimas angger dwi purna">
 						</div>
-						<h3>programmer</h3>
+						<h3>UFO</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<div class="team-container">
 						<div class="featured-photos">
-							<img src="assets/img/team1.png" class="img-responsive img-rounded" alt="afriq yasin ramadhan">
+							<img src="assets/img/l-objero.jpg" class="img-responsive img-rounded" alt="afriq yasin ramadhan">
 						</div>
-						<h3>web designer</h3>
+						<h3>CEO</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>
+					</div>
+				</div>				
+			</div>
+			
+			<div class="row padd20-top-btm" id="theteam">
+				<div class="col-md-6 col-sm-6">
+					<div class="team-container">
+						<div class="featured-photos">
+							<img src="assets/img/m-ragragio.jpg" class="img-responsive img-rounded" alt="chandra noor rachman">
+						</div>
+						<h3>COO</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="team-container">
+						<div class="featured-photos">
+							<img src="assets/img/a-pacheco.jpg" class="img-responsive img-rounded" alt="dimas angger dwi purna">
+						</div>
+						<h3>President</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="row padd20-top-btm">
 				<div class="col-md-12 t-center">
 					<h3>Lorem ipsum dolor sit amet</h3>

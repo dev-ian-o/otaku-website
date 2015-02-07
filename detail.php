@@ -57,10 +57,10 @@
 							</div>
 						</div>
 						<div class="col-md-7 col-sm-7">
-							<h3>Border Canary</h3>
+							<h3>Accessories</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque. Sed pharetra nibh eget orci convallis at posuere leo convallis. Sed blandit augue vitae augue scelerisque bibendum. Vivamus sit amet libero turpis, non venenatis urna. In blandit, odio convallis suscipit venenatis, ante ipsum cursus augue.</p>
 							<p>Item Code : <span class="label label-black">#2120</span></p>
-							<h4>$200</h4>
+							<h4>P200</h4>
 							<p><a href="#" class="btn btn-black btn-large"><i class="icon-shopping-cart"></i> Order Now</a></p>
 						</div>
 					</div>
@@ -89,8 +89,8 @@
 										<div class="thumbnail">
 										  <a href="detail.php"><img src="assets/img/manuk.jpg" class="img-responsive" alt="detail Otaku Shop"></a>
 										  <div class="caption-details">
-											<h5>Border Canary</h5>
-											<span class="price">$200</span>
+											<h5>Accessories</h5>
+											<span class="price">P200</span>
 										  </div>
 										</div>
 									  </li>
@@ -98,8 +98,8 @@
 										<div class="thumbnail">
 										  <a href="detail.php"><img src="assets/img/manuk.jpg" class="img-responsive" alt="detail Otaku Shop"></a>
 										  <div class="caption-details">
-											<h5>Border Canary</h5>
-											<span class="price">$200</span>
+											<h5>Accessories</h5>
+											<span class="price">P200</span>
 										  </div>
 										</div>
 									  </li>
@@ -107,8 +107,8 @@
 										<div class="thumbnail">
 										  <a href="detail.php"><img src="assets/img/manuk.jpg" class="img-responsive" alt="detail Otaku Shop"></a>
 										  <div class="caption-details">
-											<h5>Border Canary</h5>
-											<span class="price">$200</span>
+											<h5>Accessories</h5>
+											<span class="price">P200</span>
 										  </div>
 										</div>
 									  </li>
@@ -131,17 +131,11 @@
 							<div class="quick-search">
 								<h5>Select Category</h5>
 								<select name="cat" class="form-control">
-									<option value="Canary">Canary</option>
-									<option value="Emprit">Emprit</option>
-									<option value="Parkit">Parkit</option>
-									<option value="Doro">Doro</option>
-									<option value="Pitik">Pitik</option>
-									<option value="Jalak">Jalak</option>
-									<option value="Cucak Rowo">Cucak Rowo</option>
-									<option value="Gemak">Gemak</option>
-									<option value="Deruk">Deruk</option>
-									<option value="Kutut">Kutut</option>
-									<option value="Tilang">Tilang</option>
+									<option value="accessories">Accessories</option>
+									<option value="collectibles">Collectibles</option>
+									<option value="costumes">Costumes</option>
+									<option value="personal-items">Personal Items</option>
+									<option value="toys">Toys</option>
 								</select>
 								<h5>Select Color</h5>
 								<select name="cat" class="form-control">
@@ -156,24 +150,24 @@
 								<h5>Select Min - Max Price</h5>
 								<div class="col-md-6">
 									<select name="cat" class="form-control">
-										<option value="Yellow">$10</option>
-										<option value="Blue">$45</option>
-										<option value="Green">$70</option>
-										<option value="Red">$125</option>
-										<option value="Orange">$200</option>
-										<option value="Black">$235</option>
-										<option value="Grey">$300</option>
+										<option value="Yellow">P10</option>
+										<option value="Blue">P45</option>
+										<option value="Green">P70</option>
+										<option value="Red">P125</option>
+										<option value="Orange">P200</option>
+										<option value="Black">P235</option>
+										<option value="Grey">P300</option>
 									</select>
 								</div>
 								<div class="col-md-6">
 									<select name="cat" class="form-control">
-										<option value="Yellow">$15</option>
-										<option value="Blue">$45</option>
-										<option value="Green">$70</option>
-										<option value="Red">$125</option>
-										<option value="Orange">$200</option>
-										<option value="Black">$235</option>
-										<option value="Grey">$300</option>
+										<option value="Yellow">P15</option>
+										<option value="Blue">P45</option>
+										<option value="Green">P70</option>
+										<option value="Red">P125</option>
+										<option value="Orange">P200</option>
+										<option value="Black">P235</option>
+										<option value="Grey">P300</option>
 									</select>
 								</div>
 								<input type="submit" class="btn btn-black btn-block" name="submit" value="Search">
@@ -181,12 +175,11 @@
 
 							<h3>Categories</h3>
 							<ul class="nav nav-pills nav-stacked">
-							  <li class="active"><a href="product.php">Canary</a></li>
-							  <li><a href="product.php">Emprit</a></li>
-							  <li><a href="product.php">Parkit</a></li>
-							  <li><a href="product.php">Doro</a></li>
-							  <li><a href="product.php">Pitik</a></li>
-							  <li><a href="product.php">Gemak</a></li>
+							  <li class="active"><a href="product.php">Accessories</a></li>
+							  <li><a href="product.php">Collectibles</a></li>
+							  <li><a href="product.php">Costumes</a></li>
+							  <li><a href="product.php">Personal Items</a></li>
+							  <li><a href="product.php">Toys</a></li>
 							</ul>
 							
 							<h3>Information</h3>

@@ -34,7 +34,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<small>Copyright &copy; 2014 Otaku Shop All Right Reserved. Made With <i class="fa fa-heart-o"></i> by Ian Olinares</small>
+					<small>Copyright &copy; 2015 Otaku Shop All Right Reserved. Made With <i class="fa fa-heart-o"></i> by Ian Olinares</small>
 				</div>
 			</div>
 		</div>
