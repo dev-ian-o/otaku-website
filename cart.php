@@ -81,11 +81,10 @@
 
 						</tbody>
 					</table>
-<!-- 						<form id="heckout">
-							<input type="hidden" name="product_id" value="<?= $value['product_id']; ?>">
-							<input type="hidden" name="checkout" value="update_cart">
-							<button type="submit" class="btn btn-black">Ok</button>
-						</form> -->
+						<form id="checkout">
+							<input type="hidden" name="checkout" value="checkout">
+							<button type="submit" class="btn btn-black span-6">CHECKOUT</button>
+						</form>
 				</div>
 			</div>
 		</div>

@@ -154,7 +154,7 @@
 					if(results.success === true){
 						alert('Successfully removed cart!');
 						$('.cart-counter').html(results.cart_size);
-						that.parent().parent().remove();
+						that.parent().parent().parent().parent().remove();
 
 					}
 	              },
@@ -202,6 +202,52 @@
 			}
 			return false;
 		});
+
+		$("#checkout").on('submit', function(e){
+				e.preventDefault();
+				$carts = $('.update-cart');
+
+				$('.update-cart').each(function(index){
+
+
+					$el = $('.update-cart')[index];
+					$el = $el.parentElement.parentElement.parentElement.parentElement;
+					$val = $($el).find("[type=number]").val();
+					debugger;
+					if($.isNumeric($val) && $val > 0)
+					{
+						$($el).find('[name=qty]').val($val);
+						$.ajax({
+					              url: 'includes/requests/requests.php',
+					              type: 'POST',
+					              data: $($('.update-cart')[index]).serialize(),
+					              dataType: 'json',
+					              success: function(results){
+									console.log(results);
+					               
+									if(results.success === true){
+										// alert('Successfully updated cart!');
+										$('.cart-counter').html(results.cart_size);
+										// $el = that.parent().parent();
+										// $($el).find("[type=number]").val(results.qty);
+			
+									}
+					              },
+					              complete:function(){
+					                // $(".loader").fadeOut('slow');
+					                //loader stop here.
+					              }
+					        });					
+					}else
+					{
+						alert('Invalid number');
+					}
+
+				});
+
+				location.href = "checkout.php";
+				return false;
+			});
 	</script>
   </body>
 </html>
