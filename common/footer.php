@@ -140,7 +140,7 @@
 		});
 
 
-		$("#remove-cart").on('submit', function(e){
+		$(".remove-cart").on('submit', function(e){
 			e.preventDefault();
 			that = $(this);
 			$.ajax({
@@ -163,6 +163,43 @@
 	                //loader stop here.
 	              }
 	        });
+			return false;
+		});
+
+		$(".update-cart").on('submit', function(e){
+			e.preventDefault();
+			that = $(this);			
+			$el = that.parent().parent().parent().parent();
+
+			$val = $($el).find("[type=number]").val();
+			if($.isNumeric($val) && $val > 0)
+			{
+				$(that).find('[name=qty]').val($val);
+						// debugger;
+							$.ajax({
+					              url: 'includes/requests/requests.php',
+					              type: 'POST',
+					              data: $(this).serialize(),
+					              dataType: 'json',
+					              success: function(results){
+									console.log(results);
+					               
+									if(results.success === true){
+										alert('Successfully updated cart!');
+										$('.cart-counter').html(results.cart_size);
+										// $el = that.parent().parent();
+										// $($el).find("[type=number]").val(results.qty);
+			
+									}
+					              },
+					              complete:function(){
+					                // $(".loader").fadeOut('slow');
+					                //loader stop here.
+					              }
+					        });
+			}else{
+				alert('Invalid number');
+			}
 			return false;
 		});
 	</script>

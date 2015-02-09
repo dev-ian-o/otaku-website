@@ -39,6 +39,7 @@
 								<td>Product</td>
 								<td>Quantity</td>
 								<td></td>
+								<td></td>
 							</tr>
 						</thead>
 						<tbody>
@@ -50,26 +51,41 @@
 									<tr>	
 										<td><?= $a++; ?></td>
 										<td><?= $value['product_name']; ?> <b>(P<?= $value['price']; ?>)</b></td>
-										<td><input type="number" type="form-control" min="1" maxlength="P<?= $value['quantity']; ?>"></td>
+										<td><input type="number" type="form-control" min="1" value="<?= $value['qty']; ?>" maxlength="P<?= $value['quantity']; ?>"></td>
 										<td>
-											<form id="remove-cart">
+										<ul class="list-inline">
+										  <li><form class="remove-cart">
 												<input type="hidden" name="product_id" value="<?= $value['product_id']; ?>">
 												<input type="hidden" name="remove_cart" value="remove_cart">
 												<button type="submit" class="btn btn-black">Remove</button>
-											</form>
+											</form></li>
+										  <li><form class="update-cart">
+												<input type="hidden" name="product_id" value="<?= $value['product_id']; ?>">
+												<input type="hidden" name="qty" value="<?= $value['qty']; ?>">
+												<input type="hidden" name="update_cart" value="update_cart">
+												<button type="submit" class="btn btn-black">Update</button>
+											</form></li>
+										</ul>
+											
+
 										</td>
 									</tr>
 								<?php endforeach;?>
 
 								<?php else:?>
 									<tr>
-										<td colspan="4">Nothing in your cart!</td>
+										<td colspan="5">Nothing in your cart!</td>
 									</tr>
 								<?php endif;?>
 							<?php endif;?>
 
 						</tbody>
 					</table>
+<!-- 						<form id="heckout">
+							<input type="hidden" name="product_id" value="<?= $value['product_id']; ?>">
+							<input type="hidden" name="checkout" value="update_cart">
+							<button type="submit" class="btn btn-black">Ok</button>
+						</form> -->
 				</div>
 			</div>
 		</div>

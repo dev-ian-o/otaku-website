@@ -21,6 +21,7 @@ if(isset($_POST['cart']))
 
 	$row = json_decode(Products::findById($_POST['product_id']));
 	$row = (array) $row[0];
+	$row['qty'] = 1;
 
 	if(!isset($_SESSION['cart']))
 		$_SESSION['cart'][$_POST['product_id']] = array($row);
@@ -52,8 +53,21 @@ if(isset($_POST['cart']))
 
 if(isset($_POST['remove_cart']))
 {
-	
+
 	session_start();
 	unset($_SESSION['cart'][$_POST['product_id']]);	
 	print_r(json_encode(array("success"=>true,"cart_size"=>sizeof($_SESSION['cart']))));	
+}
+
+if(isset($_POST['update_cart']))
+{
+	session_start();
+	$_SESSION['cart'][$_POST['product_id']]['qty'] = $_POST['qty'];	
+	print_r(json_encode(array("success"=>true)));	
+}
+
+
+if(isset($_POST['checkout']))
+{
+
 }
