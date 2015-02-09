@@ -138,6 +138,33 @@
 	        });
 			return false;
 		});
+
+
+		$("#remove-cart").on('submit', function(e){
+			e.preventDefault();
+			that = $(this);
+			$.ajax({
+	              url: 'includes/requests/requests.php',
+	              type: 'POST',
+	              data: $(this).serialize(),
+	              dataType: 'json',
+	              success: function(results){
+					console.log(results);
+	               
+					if(results.success === true){
+						alert('Successfully removed cart!');
+						$('.cart-counter').html(results.cart_size);
+						that.parent().parent().remove();
+
+					}
+	              },
+	              complete:function(){
+	                // $(".loader").fadeOut('slow');
+	                //loader stop here.
+	              }
+	        });
+			return false;
+		});
 	</script>
   </body>
 </html>

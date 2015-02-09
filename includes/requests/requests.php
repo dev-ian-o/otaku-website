@@ -23,7 +23,7 @@ if(isset($_POST['cart']))
 	$row = (array) $row[0];
 
 	if(!isset($_SESSION['cart']))
-		array_push($_SESSION['cart'], $row);
+		$_SESSION['cart'][$_POST['product_id']] = array($row);
 
 	$a = 0;
 
@@ -38,12 +38,22 @@ if(isset($_POST['cart']))
 	if($a === 0){
 
 		if(isset($_SESSION['cart']))
-			array_push($_SESSION['cart'], $row);
+			$_SESSION['cart'][$_POST['product_id']] =  $row;
 		else
-			$_SESSION['cart'] = array($row);
+			$_SESSION['cart'][$_POST['product_id']] = $row;
 
 		$_SESSION['cart_counter'] = sizeof($_SESSION['cart']);		
 
 		print_r(json_encode(array("success"=>true,"cart_size"=>sizeof($_SESSION['cart']))));
 	}
+	// $_SESSION['cart'] = [];
+	// print_r(json_encode($_SESSION['cart']));
+}
+
+if(isset($_POST['remove_cart']))
+{
+	
+	session_start();
+	unset($_SESSION['cart'][$_POST['product_id']]);	
+	print_r(json_encode(array("success"=>true,"cart_size"=>sizeof($_SESSION['cart']))));	
 }
