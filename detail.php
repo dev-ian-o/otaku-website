@@ -151,7 +151,7 @@
 							
 							<h3>Information</h3>
 							<ul class="nav nav-pills nav-stacked">
-							  <li><a href="confirm.php">Payment Confirmation</a></li>
+							  <!-- <li><a href="confirm.php">Payment Confirmation</a></li> -->
 							  <li><a href="about.php">About Us</a></li>
 							  <li><a href="contact.php">Contact Us</a></li>
 							  <!-- <li><a href="testimoni.php">Testimony</a></li> -->

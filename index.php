@@ -82,7 +82,7 @@
 							<i class="fa fa-gift"></i>
 						</div>
 						<h3>gift</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>
+						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p> -->
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
@@ -91,7 +91,7 @@
 							<i class="fa fa-heart-o"></i>
 						</div>
 						<h3>costumes manufacture</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>
+						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p> -->
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
@@ -100,7 +100,7 @@
 							<i class="fa fa-flag"></i>
 						</div>
 						<h3>anime merchandise</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>
+						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p> -->
 					</div>
 				</div>
 			</div>

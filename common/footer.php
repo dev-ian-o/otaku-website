@@ -213,7 +213,7 @@
 					$el = $('.update-cart')[index];
 					$el = $el.parentElement.parentElement.parentElement.parentElement;
 					$val = $($el).find("[type=number]").val();
-					debugger;
+					// debugger;
 					if($.isNumeric($val) && $val > 0)
 					{
 						$($el).find('[name=qty]').val($val);

@@ -34,7 +34,7 @@
 					<form class="form-horizontal" role="form" action="receipt.php" method="post">
 					  	<h3 class="text-center">Checkout</h3>
 					  	<hr>
-						<div class="form-group">
+<!-- 						<div class="form-group">
 							<label class="col-sm-3 control-label">Shipping Address:</label>
 							<div class="col-sm-8">
 							  <input type="text" class="form-control" name="shipping_address" placeholder="Shipping Address" required>
@@ -46,7 +46,7 @@
 							  <textarea type="text" class="form-control" name="note" placeholder="Note">
 							  </textarea>
 							</div>
-						</div>
+						</div> -->
 						<table class="table table-responsive">
 							<thead>
 								<t>

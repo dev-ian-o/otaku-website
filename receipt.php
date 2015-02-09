@@ -1,7 +1,8 @@
 <?php  include 'common/header.php';?>
-	<?php $_SESSION['cart_id']?>
+	
 	<?php
 		session_start();
+		$_SESSION['cart_id'];
 		// Order::add();
 	?>
 
