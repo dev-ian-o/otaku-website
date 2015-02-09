@@ -1,6 +1,8 @@
 <?php require_once('includes\classes\Users.php');?>
 <?php //require_once('includes\classes\Auth.php');?>
 <?php require_once('includes\classes\Products.php');?>
+<?php require_once('includes\classes\Cart.php');?>
+<?php require_once('includes\classes\Orders.php');?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

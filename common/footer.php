@@ -230,7 +230,7 @@
 										$('.cart-counter').html(results.cart_size);
 										// $el = that.parent().parent();
 										// $($el).find("[type=number]").val(results.qty);
-			
+										location.href = "checkout.php"; 
 									}
 					              },
 					              complete:function(){
