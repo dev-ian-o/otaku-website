@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -22,42 +23,123 @@
 			<a href="index.php" class="logo visible-lg visible-md"><img src="assets/img/logo.png" alt="Otaku Shop responsive catalog themes"></a>
 			<div id="brand" class="visible-lg visible-md">&nbsp;</div>
 			<ul class="nav navbar-nav nav-right">
-			  <!-- <li <?php if(isset($_GET['page'])) if($_GET['page']=="pricing") echo 'class="active"';?>><a href="pricing.php?page=pricing">Price</a></li> -->
-			  <!-- <li <?php if(isset($_GET['page'])) if($_GET['page']=="order") echo 'class="active"';?>><a href="order.php?page=order">Order</a></li> -->
 			  <li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 				  <li><a href="product.php">Accessories</a></li>
 				  <li><a href="product.php">Collectibles</a></li>
 				  <li><a href="product.php">Costumes</a></li>
-				  <li><a href="product.php">Personal Items</a></li>
 				  <li><a href="product.php">Toys</a></li>
-				  <!-- <li>
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Doro <i class="fa fa-caret-down icon-dropdown"></i></a>
-					<ul class="dropdown-menu sub-menu">
-					  <li><a href="product.php">Accessories</a></li>
-					  <li><a href="product.php">Collectibles</a></li>
-					  <li><a href="product.php">Costumes</a></li>
-					  <li><a href="product.php">Personal Items</a></li>
-					  <li><a href="product.php">Toys</a></li>
-					</ul>
-				  </li> -->
-<!-- 				  <li class="divider"></li>
-				  <li><a href="product.php">Pitik</a></li>
-				  <li><a href="product.php">Cucak Rowo</a></li> -->
 				</ul>
 			  </li>
-<!-- 			  <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+			  <?php if(isset($_SESSION['user'])):?>
+			  <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?= $_SESSION['user'][0]['email'];?> <i class="fa fa-user"></i></a>
 				<ul class="dropdown-menu">
-				  <li><a href="blog.php">Blog 1</a></li>
-				  <li><a href="blog2.php">Blog 2</a></li>
-				  <li><a href="single.php">Single 1</a></li>
-				  <li><a href="single2.php">Single 2</a></li>
+				  <li><a href="cart.php"> <i class="fa fa-shopping-cart"></i> <span class="">Cart</span> <span class="badge pull-right">4</span></a></li>
+				  <li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>
 				</ul>
-			  </li> -->
+			  </li>
+			  <?php else:?>
+			  <li><a href="#" data-toggle="modal" data-target=".modal-login">Log In</a></li>
+			  <li><a href="#" data-toggle="modal" data-target=".modal-sign-up">Sign Up!</a></li>
+			  <?php endif;?>
 			</ul>
           
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+
+<div class="modal fade modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a href="#" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"></span></a>
+        <h4 class="modal-title" id="myModalLabel">Login</h4>  
+      </div>
+      <div class="modal-body">
+        <form method="post" id="form-login">
+          <div class="control-group">
+            <label class="control-label" for="email">Email Address:</label>
+            <input type="hidden" name="login">
+            <div class="controls">
+              <input class="span5 form-control" type="email" name="email" id="email" placeholder="juandelacruz@gmail.com" required>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="password">Password</label>
+
+            <div class="controls">
+              <input class="span5 form-control" type="password" name="password" id="password" placeholder="Password" required>
+            </div>
+          </div>
+
+      </div>
+      <div class="modal-footer">
+			<button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Cancel</button>
+	        <input type="submit" name="submit" class="btn btn-black btn-lg" value="Log in!">
+		</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modal-sign-up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a href="#" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"></span></a>
+        <h4 class="modal-title" id="myModalLabel">Sign Up!</h4>  
+      </div>
+      <div class="modal-body">
+        <form method="post" id="form-sign-up">
+          <div class="control-group">
+            <label class="control-label" for="firstname">First name:</label>
+            <input type="hidden" name="signup">
+            <div class="controls">
+              <input class="span5 form-control" type="text" name="firstname" id="firstname" placeholder="Ian" required>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="lastname">Last name:</label>
+            <div class="controls">
+              <input class="span5 form-control" type="text" name="lastname" id="lastname" placeholder="Olinares" required>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="email">Email Address:</label>
+            <div class="controls">
+              <input class="span5 form-control" type="email" name="email" id="email" placeholder="juandelacruz@gmail.com" required>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="password">Password</label>
+
+            <div class="controls">
+              <input class="span5 form-control" type="password" name="password" id="password" placeholder="Password" required>
+            </div>
+          </div>
+
+
+          <div class="control-group">
+            <label class="control-label" for="password">Re-type password:</label>
+
+            <div class="controls">
+              <input class="span5 form-control" type="password" name="re-type password" id="password" placeholder="Percentage" required>
+            </div>
+          </div>
+
+      </div>
+      <div class="modal-footer">
+			<button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Cancel</button>
+	        <input type="submit" name="submit" class="btn btn-black btn-lg" value="Sign Up!">
+		</form>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -50,5 +50,68 @@
     <script src="assets/js/gmap3.js"></script>
     <script src="assets/js/script.js"></script>
 
+	<script type="text/javascript">
+
+		$("#form-login").on('submit', function(e){
+			e.preventDefault();
+			that = $(this);
+			$.ajax({
+	              url: 'includes/requests/requests.php',
+	              type: 'POST',
+	              data: $(this).serialize(),
+	              dataType: 'json',
+	              success: function(results){
+					console.log(results);
+					if(results.success === true)
+					{
+						alert('Successfully Logged In!');
+						 location.reload();
+					}
+					else{
+						alert('Invalid email or password!')
+						that[0].reset();
+					}
+
+	               
+
+	              },
+	              complete:function(){
+	                // $(".loader").fadeOut('slow');
+	                //loader stop here.
+	              }
+	        });
+			return false;
+		});
+
+		$("#form-sign-up").on('submit', function(e){
+			e.preventDefault();
+			$.ajax({
+	              url: 'includes/requests/requests.php',
+	              type: 'POST',
+	              data: $(this).serialize(),
+	              dataType: 'json',
+	              success: function(results){
+					console.log(results);
+					if(results.success === true)
+					{
+						alert('Successfully Signed up! Please log in your account. Thank You!');
+						$('.modal').modal('hide');
+						$('.modal-login').modal('show');
+					}
+					else{
+						alert('Invalid email!');
+					}
+
+	               
+
+	              },
+	              complete:function(){
+	                // $(".loader").fadeOut('slow');
+	                //loader stop here.
+	              }
+	        });
+			return false;
+		});
+	</script>
   </body>
 </html>

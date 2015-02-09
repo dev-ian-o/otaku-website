@@ -18,8 +18,8 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="carousel-content">
-                    <h2 class="animated fadeInUpBig text-center text-black">Hello</h2>
-                      <p class="animated rollIn text-black text-center"><span class="text900">Welcome to Otaku Shop Website</span> an awesome anime shop that is, <br> built with <i class="fa fa-heart-o"></i> for <span class="text900">lovers.</span><br><br> <a href="#" class="btn btn-black btn-lg">Get Started</a></p>  
+                    <h2 class="animated fadeInUpBig text-center text-black">Moshi Moshi</h2>
+                      <p class="animated rollIn text-black text-center"><span class="text900">Welcome to Otaku Shop Website</span> an awesome anime shop that is, <br> built with <i class="fa fa-heart-o"></i> for <span class="text900">anime lovers.</span><br><br> <a href="#" class="btn btn-black btn-lg">Get Started</a></p>  
                   </div>
                 </div> 
               </div>
@@ -99,7 +99,7 @@
 						<div class="featured-photos">
 							<i class="fa fa-flag"></i>
 						</div>
-						<h3>anime merchandises</h3>
+						<h3>anime merchandise</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p>
 					</div>
 				</div>
@@ -120,86 +120,19 @@
 				</div>
 			</div>
 			<div class="row">
+				<?php $products = json_decode(Products::fetch());?>
+				<?php foreach ($products as $key => $value):?>
 				<div class="col-md-3 col-sm-4 col-xs-12">
 					<div class="thumbnail">
-					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
+					  <div class="caption-img" style="background: url(images/<?= $value->image; ?>);"></div>
 					  <div class="caption-details">
-						<h3>Accessories</h3>
-						<span class="price">P200</span>
+						<h5><?= $value->product_name; ?></h5>
+						<span class="price">P<?= $value->price; ?></span>
 					  </div>
-					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
+					  <a href="detail.php?id=<?= $value->product_id; ?>"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-4 col-xs-12">
-					<div class="thumbnail">
-					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
-					  <div class="caption-details">
-						<h3>Accessories</h3>
-						<span class="price">P200</span>
-					  </div>
-					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4 col-xs-12">
-					<div class="thumbnail">
-					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
-					  <div class="caption-details">
-						<h3>Accessories</h3>
-						<span class="price">P200</span>
-					  </div>
-					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4 col-xs-12">
-					<div class="thumbnail">
-					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
-					  <div class="caption-details">
-						<h3>Accessories</h3>
-						<span class="price">P200</span>
-					  </div>
-					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4 col-xs-12">
-					<div class="thumbnail">
-					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
-					  <div class="caption-details">
-						<h3>Accessories</h3>
-						<span class="price">P200</span>
-					  </div>
-					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4 col-xs-12">
-					<div class="thumbnail">
-					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
-					  <div class="caption-details">
-						<h3>Accessories</h3>
-						<span class="price">P200</span>
-					  </div>
-					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4 col-xs-12">
-					<div class="thumbnail">
-					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
-					  <div class="caption-details">
-						<h3>Accessories</h3>
-						<span class="price">P200</span>
-					  </div>
-					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4 col-xs-12">
-					<div class="thumbnail">
-					  <div class="caption-img" style="background: url(assets/img/manuk.jpg);"></div>
-					  <div class="caption-details">
-						<h3>Accessories</h3>
-						<span class="price">P200</span>
-					  </div>
-					  <a href="detail.php"><div class="caption-link"><i class="fa fa-plus"></i></div></a>
-					</div>
-				</div>
+				<?php endforeach;?>
 			</div>
 		</div>
 	</div>
@@ -241,7 +174,7 @@
 	<!-- end:testimoni -->
 	
 	<!-- begin:blog -->
-	<div id="blog">
+	<!-- <div id="blog">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -291,6 +224,6 @@
 				
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- end:blog -->
 <?php  include 'common/footer.php';?>
