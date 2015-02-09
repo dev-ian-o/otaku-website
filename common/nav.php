@@ -26,17 +26,18 @@
 			  <li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
 				<ul class="dropdown-menu">
-				  <li><a href="product.php">Accessories</a></li>
-				  <li><a href="product.php">Collectibles</a></li>
-				  <li><a href="product.php">Costumes</a></li>
-				  <li><a href="product.php">Toys</a></li>
+				  <li><a href="product.php?category=accessories">Accessories</a></li>
+				  <li><a href="product.php?category=collectibles">Collectibles</a></li>
+				  <li><a href="product.php?category=costumes">Costumes</a></li>
+				  <li><a href="product.php?category=toy">Toys</a></li>
+				  <li><a href="product.php?category=magazine">magazines</a></li>
 				</ul>
 			  </li>
 			  <?php if(isset($_SESSION['user'])):?>
 			  <li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?= $_SESSION['user'][0]['email'];?> <i class="fa fa-user"></i></a>
 				<ul class="dropdown-menu">
-				  <li><a href="cart.php"> <i class="fa fa-shopping-cart"></i> <span class="">Cart</span> <span class="badge pull-right">4</span></a></li>
+				  <li><a href="cart.php"> <i class="fa fa-shopping-cart"></i> <span class="">Cart</span> <span class="cart-counter badge pull-right"><?php if(isset($_SESSION['cart_counter'])) echo $_SESSION['cart_counter'];?></span></a></li>
 				  <li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>
 				</ul>
 			  </li>

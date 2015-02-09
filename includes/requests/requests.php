@@ -2,6 +2,7 @@
 <?php
 require_once('../classes/Auth.php');
 require_once('../classes/Users.php');
+require_once('../classes/Products.php');
 
 if(isset($_POST['login']))
 {
@@ -11,4 +12,38 @@ if(isset($_POST['login']))
 if(isset($_POST['signup']))
 {
 	print_r(Users::add($_POST));
+}
+
+if(isset($_POST['cart']))
+{
+	session_start();
+
+
+	$row = json_decode(Products::findById($_POST['product_id']));
+	$row = (array) $row[0];
+
+	if(!isset($_SESSION['cart']))
+		array_push($_SESSION['cart'], $row);
+
+	$a = 0;
+
+	foreach ($_SESSION['cart'] as $key => $value) {
+		if($value['product_id'] ==  $_POST['product_id']){
+			print_r(json_encode(array("success"=>false)));
+			$a = 1;
+			break;
+		}
+	}
+
+	if($a === 0){
+
+		if(isset($_SESSION['cart']))
+			array_push($_SESSION['cart'], $row);
+		else
+			$_SESSION['cart'] = array($row);
+
+		$_SESSION['cart_counter'] = sizeof($_SESSION['cart']);		
+
+		print_r(json_encode(array("success"=>true,"cart_size"=>sizeof($_SESSION['cart']))));
+	}
 }

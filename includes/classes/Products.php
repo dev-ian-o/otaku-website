@@ -112,10 +112,25 @@ class Products extends Base{
 
 		$conn = self::conn();
 
-		$stmt = $conn->prepare("SELECT * FROM ".self::$table." WHERE user_id = :id AND deleted_at IS NULL");
+		$stmt = $conn->prepare("SELECT * FROM ".self::$table." WHERE product_id = :id AND deleted_at IS NULL");
 
 		$stmt->execute(array(
 			"id" => $id
+		));
+		
+		$row = $stmt->fetchAll(PDO::FETCH_ASSOC);		
+
+		return json_encode($row);			
+	}
+
+	public static function findByCategory($category){
+
+		$conn = self::conn();
+
+		$stmt = $conn->prepare("SELECT * FROM ".self::$table." WHERE category = :category AND deleted_at IS NULL");
+
+		$stmt->execute(array(
+			"category" => $category
 		));
 		
 		$row = $stmt->fetchAll(PDO::FETCH_ASSOC);		
@@ -266,14 +281,47 @@ $row = [
 		"image" => "products/toys/toy5.jpg",],
 
 
+
+	["product_name" => "Collectible 1",
+		"product_desc" => "Nice!",
+		"category" => "collectibles",
+		"price" => "700",
+		"quantity" => "100",
+		"image" => "products/collectibles/collectible1.jpg",],
+	["product_name" => "Collectible 2",
+		"product_desc" => "Nice!",
+		"category" => "collectibles",
+		"price" => "700",
+		"quantity" => "100",
+		"image" => "products/collectibles/collectible2.jpg",],
+	["product_name" => "Collectible 3",
+		"product_desc" => "Nice!",
+		"category" => "collectibles",
+		"price" => "700",
+		"quantity" => "100",
+		"image" => "products/collectibles/collectible3.jpg",],
+	["product_name" => "Collectible 4",
+		"product_desc" => "Nice!",
+		"category" => "collectibles",
+		"price" => "700",
+		"quantity" => "100",
+		"image" => "products/collectibles/collectible4.jpg",],
+	["product_name" => "Collectible 5",
+		"product_desc" => "Nice!",
+		"category" => "collectibles",
+		"price" => "700",
+		"quantity" => "100",
+		"image" => "products/collectibles/collectible5.jpg",],
+
+
 ];
 
 // $id = 1;
-Products::truncate();
-foreach ($row as $key => $value) {
+// Products::truncate();
+// foreach ($row as $key => $value) {
 
-	print_r(Products::add($value));	
-}
+// 	print_r(Products::add($value));	
+// }
 
 
 

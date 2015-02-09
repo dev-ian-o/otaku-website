@@ -112,6 +112,32 @@
 	        });
 			return false;
 		});
+
+
+		$("#add-product").on('submit', function(e){
+			e.preventDefault();
+			$.ajax({
+	              url: 'includes/requests/requests.php',
+	              type: 'POST',
+	              data: $(this).serialize(),
+	              dataType: 'json',
+	              success: function(results){
+					console.log(results);
+	               
+					if(results.success === true){
+						alert('Successfully added to cart!');
+						$('.cart-counter').html(results.cart_size);
+					}
+					else
+						alert('Already added to cart');
+	              },
+	              complete:function(){
+	                // $(".loader").fadeOut('slow');
+	                //loader stop here.
+	              }
+	        });
+			return false;
+		});
 	</script>
   </body>
 </html>
