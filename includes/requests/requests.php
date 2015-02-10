@@ -58,7 +58,9 @@ if(isset($_POST['remove_cart']))
 
 	session_start();
 	unset($_SESSION['cart'][$_POST['product_id']]);	
+	$_SESSION['cart_counter'] = 0;
 	print_r(json_encode(array("success"=>true,"cart_size"=>sizeof($_SESSION['cart']))));	
+
 }
 
 if(isset($_POST['update_cart']))
