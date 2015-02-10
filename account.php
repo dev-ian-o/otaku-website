@@ -24,15 +24,22 @@
 		<div class="row">
 			<div class="col-md-12 product-tabs">
 				<ul id="myTab" class="nav nav-tabs">
-			      <li class="active"><a href="#user-account" data-toggle="tab">User Account</a></li>
-			      <li class=""><a href="#orders" data-toggle="tab">Orders</a></li>
-			      <li class=""><a href="#settings" data-toggle="tab">Settings</a></li>
+			      <li class=""><a href="#user-account" data-toggle="tab">User Account</a></li>
+			      <li class="active"><a href="#orders" data-toggle="tab">Orders</a></li>
+			      <!-- <li class=""><a href="#settings" data-toggle="tab">Settings</a></li> -->
 			    </ul>
 			    <div id="myTabContent" class="tab-content">
-			      <div class="tab-pane fade" id="user-account">
-			      		<?= $_SESSION['user'][0]['email']?>
+			      <div class="tab-pane fade " id="user-account">
+			      	<div style="padding:20px;" class="row">
+			      			<h5>
+			      		<div class="col-xs-12">
+			      		<i class="fa fa-envelope"></i> <label>Email Address:</label><label class="badge"> <?= $_SESSION['user'][0]['email']?></label><br><br>
+			      		<i class="fa fa-user"></i> <label>Name:</label><label class="badge"> <?= $_SESSION['user'][0]['firstname']." ".$_SESSION['user'][0]['lastname']?></label>
+			      		</div>
+			      		</h5>
+			      	</div>
 			      </div>
-			      <div class="tab-pane fade  active in" id="orders">
+			      <div class="tab-pane fade active in" id="orders">
 			        	<div class="row">
 			        		<div class="col-md-12">
 
