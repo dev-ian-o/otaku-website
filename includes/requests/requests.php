@@ -3,6 +3,8 @@
 require_once('../classes/Auth.php');
 require_once('../classes/Users.php');
 require_once('../classes/Products.php');
+require_once('../classes/Orders.php');
+require_once('../classes/Cart.php');
 
 if(isset($_POST['login']))
 {
@@ -67,7 +69,20 @@ if(isset($_POST['update_cart']))
 }
 
 
-if(isset($_POST['checkout']))
-{
 
+if(isset($_POST['final_checkout']))
+{
+	session_start();
+	$cart = json_decode(Cart::add($_POST));
+	$cart = json_decode(Cart::findByInvoiceNo($cart->invoice_no));
+	// print_r($_SESSION['cart']);
+
+	foreach ($_SESSION['cart'] as $key => $value) {
+		$value['user_id'] = $_SESSION['user'][0]['user_id'];
+		$value['cart_id'] = $cart[0]->cart_id;
+		Orders::add($value);
+	}
+	print_r(json_encode(array("success"=>true)));
+	$_SESSION['cart'] = [];
+	$_SESSION['cart_counter'] = 0;
 }

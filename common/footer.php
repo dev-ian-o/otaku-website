@@ -1,11 +1,11 @@
-	
+	<a href="#back-to-top" class="back-to-top"><i class="fa fa-chevron-up white"></i></a>
 	<!-- begin:footer -->
 	<div id="footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<h3>Otaku Shop</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus,<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<p>Otaku shop is a one stop shop dedicated to offer wide range of anime related merchandise</p>
 
 					<ul class="list-unstyled social-icon">
 		              <li><a href="#" rel="tooltip" title="Facebook" class="icon-facebook"><span><i class="fa fa-facebook-square"></i></span></a></li>
@@ -248,6 +248,66 @@
 				location.href = "checkout.php";
 				return false;
 			});
+
+		$("#checkout-form").on('submit', function(e){
+			e.preventDefault();
+			that = $(this);
+			$.ajax({
+	              url: 'includes/requests/requests.php',
+	              type: 'POST',
+	              data: $(this).serialize(),
+	              dataType: 'json',
+	              success: function(results){
+					console.log(results);
+					if(results.success === true){
+						location.href = "account.php";			
+					}
+	              },
+	              complete:function(){
+	                // $(".loader").fadeOut('slow');
+	                //loader stop here.
+	              }
+	        });
+			return false;
+		});
+
+		var offset = 220;
+	    var duration = 500;
+	    jQuery(window).scroll(function() {
+	        if (jQuery(this).scrollTop() > offset) {
+	            jQuery('.back-to-top').fadeIn(duration);
+	        } else {
+	            jQuery('.back-to-top').fadeOut(duration);
+	        }
+	    });
+	    
+	    jQuery('.back-to-top').click(function(event) {
+	        event.preventDefault();
+	        jQuery('html, body').animate({scrollTop: 0}, duration);
+	        return false;
+	    })
+	</script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+	    $('a[href^="#"]').bind('click.smoothscroll',function (e) {
+	        e.preventDefault();
+	        var target = this.hash,
+	        $target = $(target);
+	        excluded = ['#testi','#orders','#settings','#user-account'];
+	        console.log($.inArray(target,excluded) == -1);
+	        if($.inArray(target,excluded) == -1)
+	        {	
+		        $('html, body').stop().animate( {
+		            'scrollTop': $target.offset().top
+		        }, 900, 'swing', function () {
+		            window.location.hash = target;
+		        } );
+		    }
+	    } );
+	} );
+		$(function () {
+		  $('[data-toggle="tooltip"]').tooltip()
+		})
 	</script>
   </body>
 </html>

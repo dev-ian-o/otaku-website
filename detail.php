@@ -58,7 +58,7 @@
 							<form id="add-product">
 							<input type="hidden" name="product_id" value="<?= $product[0]->product_id; ?>">
 							<input type="hidden" name="cart" value="cart">
-							<p><button type="submit" name="submit" class="btn btn-black btn-large"><i class="fa fa-shopping-cart"></i> Order Now</button></p>
+							<p><button type="submit" name="submit" class="btn btn-black btn-large"><i class="fa fa-shopping-cart"></i> Add to cart</button></p>
 							</form>
 						</div>
 					</div>

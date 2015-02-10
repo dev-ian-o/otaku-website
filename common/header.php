@@ -29,3 +29,5 @@
       <script src="assets/js/respond.min.js"></script>
     <![endif]-->
   </head>
+  
+    <span id="back-to-top"></span>

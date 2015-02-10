@@ -9,25 +9,45 @@ class Cart extends Base{
 	
 	private static $table = "cart";
 
+	// private static function invoice_no(){
+	// 	$conn = self::conn();		
+
+	// 	$stmt = $conn->prepare("SELECT * FROM ".self::$table." WHERE invoice_no=:invoice_no AND deleted_at IS null");
+
+	// 	$stmt->execute(array(
+	// 		"invoice_no" => mt_rand(100000000,999999999)
+	// 	));
+
+	// 	$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+	// 	if($row == null)
+	// 		return json_encode(array("success"=> true)); // email already exist
+	// 	else
+	// 		return json_encode(array("success"=> false)); // email accepted
+
+	// }
 
 	public static function add($row){
+		$conn = self::conn();		
 
-		$conn = self::conn();
-
+		$invoice_no =  mt_rand(100000000,999999999);
 		$stmt = $conn->prepare("INSERT INTO 
-			".self::$table." (`user_id`, `shipping_address`, `total`, `note`,`date`  `created_at`) 
-			VALUES (:user_id, :shipping_address, :total, :note, now(), now());");
+			".self::$table." (`user_id`,`invoice_no`, `shipping_address`, `shipping_fee`, `total`, `note`,`date`, `created_at`) 
+			VALUES (:user_id, :invoice_no, :shipping_address, :shipping_fee, :total, :note, now(), now());");
 
 		$stmt->execute(array(
 			"user_id" => $row['user_id'],
+			"invoice_no" => $invoice_no,
 			"shipping_address" => $row['shipping_address'],
+			"shipping_fee" => $row['shipping_fee'],
 			"total" => $row['total'],
 			"note" => $row['note'],
 		));
 		
 		$row = $stmt->fetchAll(PDO::FETCH_ASSOC);		
 
-		return json_encode(array("success"=> true));
+		return json_encode(array("success"=> true,"invoice_no"=>$invoice_no ));
+
 	}
 
 
@@ -43,7 +63,7 @@ class Cart extends Base{
 				lastname = :lastname,
 				password = :password,
 				updated_at = now()
-			WHERE user_id = :id");
+			WHERE cart_id = :id");
 
 		$stmt->execute(array(
 			"email" => $row['email'],
@@ -51,7 +71,7 @@ class Cart extends Base{
 			"lastname" => $row['lastname'],
 			"password" => $row['password'],
 			// "image" => $row['password'],
-			"id" => $row['user_id'],
+			"id" => $row['cart_id'],
 		));
 		
 		$row = $stmt->fetchAll(PDO::FETCH_ASSOC);		
@@ -65,7 +85,7 @@ class Cart extends Base{
 
 		$stmt = $conn->prepare("UPDATE ".self::$table." 
 			SET deleted_at = now()
-			WHERE user_id = :id");
+			WHERE cart_id = :id");
 
 		$stmt->execute(array(
 			"id" => $id,
@@ -93,6 +113,36 @@ class Cart extends Base{
 	}
 
 	public static function findById($id){
+
+		$conn = self::conn();
+
+		$stmt = $conn->prepare("SELECT * FROM ".self::$table." WHERE cart_id = :id AND deleted_at IS NULL");
+
+		$stmt->execute(array(
+			"id" => $id
+		));
+		
+		$row = $stmt->fetchAll(PDO::FETCH_ASSOC);		
+
+		return json_encode($row);			
+	}
+
+	public static function findByInvoiceNo($id){
+
+		$conn = self::conn();
+
+		$stmt = $conn->prepare("SELECT * FROM ".self::$table." WHERE invoice_no = :id AND deleted_at IS NULL");
+
+		$stmt->execute(array(
+			"id" => $id
+		));
+		
+		$row = $stmt->fetchAll(PDO::FETCH_ASSOC);		
+
+		return json_encode($row);			
+	}
+
+	public static function findByUserId($id){
 
 		$conn = self::conn();
 

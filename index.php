@@ -1,7 +1,7 @@
 <?php  include 'common/header.php';?>
 
   <body>
-	<?php  include 'common/nav.php';?>	
+	<?php  include 'common/nav.php';?>
 
 
     <!-- begin:slider -->
@@ -19,7 +19,7 @@
                 <div class="col-md-12">
                   <div class="carousel-content">
                     <h2 class="animated fadeInUpBig text-center text-black">Moshi Moshi</h2>
-                      <p class="animated rollIn text-black text-center"><span class="text900">Welcome to Otaku Shop Website</span> an awesome anime shop that is, <br> built with <i class="fa fa-heart-o"></i> for <span class="text900">anime lovers.</span><br><br> <a href="#" class="btn btn-black btn-lg">Get Started</a></p>  
+                      <p class="animated rollIn text-black text-center"><span class="text900">Welcome to Otaku Shop Website</span> an awesome anime shop that is, <br> built with <i class="fa fa-heart-o"></i> for <span class="text900">anime lovers.</span><br><br> <a href="#featured-go" class="btn btn-black btn-lg">Get Started</a></p>  
                   </div>
                 </div> 
               </div>
@@ -30,9 +30,23 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="carousel-content">
-                  	<h3 class="animated fadeInLeftBig text-left">.Otaku</h3>
+                  	<h3 class="animated fadeInLeftBig text-left">Otaku</h3>
 					<p class="animated fadeInDownBig text-left">is a Japanese term for people with obsessive interests,<br> commonly the anime and manga fandom.</p>
-					<a class="btn btn-black btn-lg animated fadeInRight" href="#">Learn more &raquo;</a>
+					<a class="btn btn-black btn-lg animated fadeInRight" href="#testimoni-go">View Testimonials &raquo;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item" style="background: url(assets/img/img05.jpg);">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="carousel-content">
+                  	<h3 class="animated fadeInLeftBig text-left">Cart</h3>
+					<p class="animated fadeInDownBig text-left">Otaku shop website is also an online store to buy your favorite anime merchadises. </p>
+					<a class="btn btn-black btn-lg animated fadeInRight" href="#products-go">Featured Products &raquo;</a>
                   </div>
                 </div>
               </div>
@@ -57,21 +71,23 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h2>Hello There, This is 'Otaku Shop Website'</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque. Sed pharetra nibh eget orci convallis at posuere leo convallis. Sed blandit augue vitae augue scelerisque bibendum.</p>
+					<p> Otaku shop as company, expresses its support for cosplayers by allowing purchase, selling and acquisition of new cosplay materials through trade. Otaku shop serves passionate cosplayers by tailoring personalized costumes.</p>
 				</div>
+
 			</div>
 		</div>
+
 	</div>
 	<!-- end:tagline -->
-	
 	<!-- begin:featured -->
+	<span id="featured-go" class="anchor"></span>
 	<div id="featured">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="heading-title">
 						<h2>Services</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+						<p>We offer anime products and services that could be categorized as: </p>
 					</div>
 				</div>
 			</div>
@@ -79,9 +95,9 @@
 				<div class="col-md-4 col-sm-4">
 					<div class="featured-container">
 						<div class="featured-photos">
-							<i class="fa fa-gift"></i>
+							<i class="fa fa-exchange"></i>
 						</div>
-						<h3>gift</h3>
+						<h3>costume trade</h3>
 						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque.</p> -->
 					</div>
 				</div>
@@ -108,6 +124,7 @@
 	</div>
 	<!-- end:featured -->
 	
+	<span id="products-go" class="anchor"></span>
 	<!-- begin:catalogue -->
 	<div id="catalogue">
 		<div class="container">
@@ -138,6 +155,7 @@
 	</div>
 	<!-- end:catalogue -->	
 	
+	<span id="testimoni-go" class="anchor"></span>
 	<!-- begin:testimoni -->
 	<div id="testimoni">
 		<div class="container">
@@ -152,16 +170,16 @@
 					<div id="testi" class="carousel slide" data-ride="carousel">
 				      <div class="carousel-inner">
 				        <div class="item active">
-				           <p class="testimoni-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-							<h4>&#8212; John doe, Scriptlabs &#8212;</h4>
+				           <p class="testimoni-item">Excellent each and every time! 100% recommended.</p>
+							<h4>&#8212; Alodia Gosiengfiao, TVHost/Cosplayer  &#8212;</h4>
 				        </div>
 				        <div class="item">
-				           <p class="testimoni-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-							<h4>&#8212; John doe, Scriptlabs &#8212;</h4>
+				           <p class="testimoni-item">Otaku shop took almost all the pain out of making my own costumes.</p>
+							<h4>&#8212; Koleen Mercado, Ambassadress of Smart GameX/Cosplayer &#8212;</h4>
 				        </div>
 				        <div class="item">
-				           <p class="testimoni-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-							<h4>&#8212; John doe, Scriptlabs &#8212;</h4>
+				           <p class="testimoni-item">Ordering my wanted anime products has never been easy before I met Otaku Website.</p>
+							<h4>&#8212; Myrtle Sarrosa, Actress/Cosplayer/Recording Artist &#8212;</h4>
 				        </div>
 				      </div>
 				      <a class="left carousel-control" href="#testi" data-slide="prev">&lsaquo;</a>

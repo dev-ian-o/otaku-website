@@ -31,6 +31,12 @@
 			</div>
 			
 			<div class="row">
+				<div class="pull-right">
+					<!-- <form id="empty_cart">
+						<input type="hidden" name="empty_cart" value="">
+						<button type="submit" class="btn btn-black span-6">EMPTY CART</button>
+					</form> -->
+				</div>
 				<div class="col-md-12 text-center">
 					<table class="table table-responsive">
 						<thead>
@@ -81,10 +87,18 @@
 
 						</tbody>
 					</table>
+
+					<?php if (isset($_SESSION['cart'])): ?>
+
+						<?php if (!sizeof($_SESSION['cart']) == 0): ?>
 						<form id="checkout">
 							<input type="hidden" name="checkout" value="checkout">
 							<button type="submit" class="btn btn-black span-6">CHECKOUT</button>
 						</form>
+
+						<?php endif;?>
+					<?php endif;?>
+
 				</div>
 			</div>
 		</div>

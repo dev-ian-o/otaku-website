@@ -14,14 +14,15 @@ class Orders extends Base{
 		$conn = self::conn();
 
 		$stmt = $conn->prepare("INSERT INTO 
-			".self::$table." (`user_id`, `product_id`, `cart_id`, `quantity`, `date`, `created_at`) 
-			VALUES (:user_id, :product_id, :cart_id, :quantity, now(), now());");
+			".self::$table." (`user_id`, `product_id`, `cart_id`, `quantity`, `price`, `date`, `created_at`) 
+			VALUES (:user_id, :product_id, :cart_id, :quantity, :price, now(), now());");
 
 		$stmt->execute(array(
 			"user_id" => $row['user_id'],
 			"product_id" => $row['product_id'],
 			"cart_id" => $row['cart_id'],
 			"quantity" => $row['qty'],
+			"price" => $row['price'],
 		));
 		
 		$row = $stmt->fetchAll(PDO::FETCH_ASSOC);		
@@ -98,6 +99,22 @@ class Orders extends Base{
 
 		$stmt->execute(array(
 			"id" => $id
+		));
+		
+		$row = $stmt->fetchAll(PDO::FETCH_ASSOC);		
+
+		return json_encode($row);			
+	}
+
+	public static function findByUserCartId($row){
+
+		$conn = self::conn();
+
+		$stmt = $conn->prepare("SELECT * FROM ".self::$table." WHERE cart_id =:cart_id AND user_id =:user_id AND deleted_at IS NULL");
+
+		$stmt->execute(array(
+			"user_id" => $row['user_id'],
+			"cart_id" => $row['cart_id'],
 		));
 		
 		$row = $stmt->fetchAll(PDO::FETCH_ASSOC);		

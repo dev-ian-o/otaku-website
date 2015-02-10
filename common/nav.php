@@ -35,9 +35,10 @@
 			  </li>
 			  <?php if(isset($_SESSION['user'])):?>
 			  <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?= $_SESSION['user'][0]['email'];?> <i class="fa fa-user"></i></a>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?= $_SESSION['user'][0]['email'];?> <i class="fa fa-caret-down"></i></a>
 				<ul class="dropdown-menu">
-				  <li><a href="cart.php"> <i class="fa fa-shopping-cart"></i> <span class="">Cart</span> <span class="cart-counter badge pull-right"><?php if(isset($_SESSION['cart_counter'])) echo $_SESSION['cart_counter'];?></span></a></li>
+				  <li><a href="account.php"><i class="fa fa-user"></i> Account</a></li>
+				  <li class="divider"></li>
 				  <li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>
 				</ul>
 			  </li>
@@ -45,6 +46,7 @@
 			  <li><a href="#" data-toggle="modal" data-target=".modal-login">Log In</a></li>
 			  <li><a href="#" data-toggle="modal" data-target=".modal-sign-up">Sign Up!</a></li>
 			  <?php endif;?>
+  			  <li><a href="cart.php"> <i class="fa fa-shopping-cart fa-1x"></i> <span class=""></span> &nbsp; <span style="background-color:rgb(190, 7, 6);" class="cart-counter active badge pull-right"><?php if(isset($_SESSION['cart_counter'])) echo $_SESSION['cart_counter'];?></span></a></li>
 			</ul>
           
         </div><!-- /.navbar-collapse -->
