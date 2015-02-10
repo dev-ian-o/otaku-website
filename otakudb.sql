@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2015 at 05:40 PM
+-- Generation Time: Feb 10, 2015 at 04:52 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -29,15 +29,29 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `cart` (
   `cart_id` int(10) NOT NULL AUTO_INCREMENT,
   `user_id` int(10) NOT NULL,
+  `invoice_no` int(9) NOT NULL,
   `shipping_address` varchar(255) NOT NULL,
+  `shipping_fee` double NOT NULL,
   `total` double NOT NULL,
   `note` mediumtext NOT NULL,
   `date` datetime DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`cart_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`cart_id`),
+  UNIQUE KEY `invoice_no` (`invoice_no`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`cart_id`, `user_id`, `invoice_no`, `shipping_address`, `shipping_fee`, `total`, `note`, `date`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 12, 734114460, 'Quis non quia laboriosam consequat Soluta ut vel est reprehenderit veniam nemo', 500, 28284, 'Quis nemo ullamco in dignissimos labore irure harum nihil perferendis ut ratione et deleniti ut eveniet.', '2015-02-10 07:04:13', '2015-02-10 07:04:13', NULL, NULL),
+(2, 3, 436471261, 'Suscipit vero quisquam aut illum enim minim atque eos pariatur Sequi laboris minima eligendi eum cillum et similique unde exercitationem', 500, 475, 'Quis ullamco et dolore veniam, deserunt neque ipsa, eaque excepturi consequat. Eaque autem animi, nobis sint, aut voluptate consequuntur.', '2015-02-10 12:20:54', '2015-02-10 12:20:54', NULL, NULL),
+(3, 3, 648109148, 'Quasi quidem reiciendis facilis esse est vero mollitia modi modi nulla accusamus accusamus unde', 500, 6296, 'Quia voluptas elit, rerum quis laboriosam, ad et autem tempora laborum. Esse quidem mollitia vero minima eiusmod et tempore, sint.', '2015-02-10 13:46:38', '2015-02-10 13:46:38', NULL, NULL),
+(4, 3, 288043456, 'Hic eum dignissimos quis temporibus eius commodo nobis autem', 500, 200, 'Suscipit cupidatat atque minim elit, quaerat id debitis incididunt laborum. Sed ullam vero inventore officia est autem.', '2015-02-10 13:51:42', '2015-02-10 13:51:42', NULL, NULL),
+(5, 3, 868546916, 'Non corporis commodo expedita laboriosam obcaecati doloremque tempora et explicabo Doloribus aut commodi quis ullamco dolores in ipsam', 500, 2100, 'In et quod et laborum. Ducimus, neque ea sit et sit debitis neque ut neque exercitation magnam.', '2015-02-10 13:53:13', '2015-02-10 13:53:13', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -52,11 +66,26 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `cart_id` int(10) NOT NULL,
   `date` datetime NOT NULL,
   `quantity` double NOT NULL,
+  `price` double NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`order_id`, `user_id`, `product_id`, `cart_id`, `date`, `quantity`, `price`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 12, 6, 1, '2015-02-10 07:04:13', 9, 1899, '2015-02-10 07:04:13', NULL, NULL),
+(2, 12, 7, 1, '2015-02-10 07:04:13', 7, 1599, '2015-02-10 07:04:13', NULL, NULL),
+(3, 3, 2, 2, '2015-02-10 12:20:55', 1, 200, '2015-02-10 12:20:55', NULL, NULL),
+(4, 3, 1, 2, '2015-02-10 12:20:55', 1, 275, '2015-02-10 12:20:55', NULL, NULL),
+(5, 3, 10, 3, '2015-02-10 13:46:38', 3, 1499, '2015-02-10 13:46:38', NULL, NULL),
+(6, 3, 8, 3, '2015-02-10 13:46:38', 1, 1799, '2015-02-10 13:46:38', NULL, NULL),
+(7, 3, 2, 4, '2015-02-10 13:51:42', 1, 200, '2015-02-10 13:51:42', NULL, NULL),
+(8, 3, 22, 5, '2015-02-10 13:53:13', 3, 700, '2015-02-10 13:53:13', NULL, NULL);
 
 -- --------------------------------------------------------
 
