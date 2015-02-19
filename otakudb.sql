@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2015 at 04:52 PM
+-- Generation Time: Feb 20, 2015 at 06:01 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -105,38 +105,43 @@ CREATE TABLE IF NOT EXISTS `products` (
   `updated_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 --
 -- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`product_id`, `product_name`, `product_desc`, `category`, `price`, `quantity`, `image`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Fairy Tail Metal Bracelet', 'Very nice!', 'accessories', 275, 100, 'products/accessories/fairy_tail_metal_bracelet.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(2, 'One Piece Black Rotating Ring', 'Very Elegant!', 'accessories', 200, 100, 'products/accessories/one_piece_black_rotating_ring.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(3, 'Radiant Dreamer', 'Very Beautiful!', 'accessories', 250, 100, 'products/accessories/radiant_dreamer.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(4, 'Scouting Legion Ring', 'Good!', 'accessories', 300, 100, 'products/accessories/scouting_legion_ring.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(5, 'Shingeki No Kyojin Necklace', 'Nice!', 'accessories', 350, 100, 'products/accessories/shingeki_no_kyojin_necklace.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(6, 'Costume 1', 'Nice!', 'costumes', 1899, 100, 'products/costumes/costume1.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(7, 'Costume 2', 'Nice!', 'costumes', 1599, 100, 'products/costumes/costume2.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(8, 'Costume 3', 'Nice!', 'costumes', 1799, 100, 'products/costumes/costume3.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(9, 'Costume 4', 'Nice!', 'costumes', 1399, 100, 'products/costumes/costume4.png', '2015-02-09 09:37:06', NULL, NULL),
-(10, 'Costume 5', 'Nice!', 'costumes', 1499, 100, 'products/costumes/costume5.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(11, 'Magazine 1', 'Nice!', 'magazine', 500, 100, 'products/magazines/magazine1.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(12, 'Magazine 2', 'Nice!', 'magazine', 500, 100, 'products/magazines/magazine2.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(13, 'Magazine 3', 'Nice!', 'magazine', 500, 100, 'products/magazines/magazine3.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(14, 'Magazine 4', 'Nice!', 'magazine', 500, 100, 'products/magazines/magazine4.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(15, 'Magazine 5', 'Nice!', 'magazine', 500, 100, 'products/magazines/magazine5.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(16, 'Toy 1', 'Nice!', 'toy', 480, 100, 'products/toys/toy1.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(17, 'Toy 2', 'Nice!', 'toy', 480, 100, 'products/toys/toy2.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(18, 'Toy 3', 'Nice!', 'toy', 480, 100, 'products/toys/toy3.jpg', '2015-02-09 09:37:06', NULL, NULL),
-(19, 'Toy 4', 'Nice!', 'toy', 480, 100, 'products/toys/toy4.jpg', '2015-02-09 09:37:07', NULL, NULL),
-(20, 'Toy 5', 'Nice!', 'toy', 480, 100, 'products/toys/toy5.jpg', '2015-02-09 09:37:07', NULL, NULL),
-(21, 'Collectible 1', 'Nice!', 'collectibles', 700, 100, 'products/collectibles/collectible1.jpg', '2015-02-09 09:37:07', NULL, NULL),
-(22, 'Collectible 2', 'Nice!', 'collectibles', 700, 100, 'products/collectibles/collectible2.jpg', '2015-02-09 09:37:07', NULL, NULL),
-(23, 'Collectible 3', 'Nice!', 'collectibles', 700, 100, 'products/collectibles/collectible3.jpg', '2015-02-09 09:37:07', NULL, NULL),
-(24, 'Collectible 4', 'Nice!', 'collectibles', 700, 100, 'products/collectibles/collectible4.jpg', '2015-02-09 09:37:07', NULL, NULL),
-(25, 'Collectible 5', 'Nice!', 'collectibles', 700, 100, 'products/collectibles/collectible5.jpg', '2015-02-09 09:37:07', NULL, NULL);
+(1, 'Fairy Tail Metal Bracelet', 'Very nice!', 'accessories', 275, 100, 'products/accessories/fairy_tail_metal_bracelet.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(2, 'One Piece Black Rotating Ring', 'Very Elegant!', 'accessories', 200, 100, 'products/accessories/one_piece_black_rotating_ring.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(3, 'Radiant Dreamer', 'Very Beautiful!', 'accessories', 250, 100, 'products/accessories/radiant_dreamer.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(4, 'Scouting Legion Ring', 'Good!', 'accessories', 300, 100, 'products/accessories/scouting_legion_ring.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(5, 'Shingeki No Kyojin Necklace', 'Nice!', 'accessories', 350, 100, 'products/accessories/shingeki_no_kyojin_necklace.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(6, 'Hisagi Shuuhei', 'Bleach Hisagi Shuuhei Cosplaycostume', 'costumes', 1899, 100, 'products/costumes/bleach-hisagi-shuuhei-cosplaycostume2.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(7, 'Karakura', 'Bleach Karakura High School Girl''s School Uniform costume', 'costumes', 1599, 100, 'products/costumes/bleach-karakura-high-school-girls-school-uniform-costume4.png', '2015-02-20 06:00:45', NULL, NULL),
+(8, 'Dragon Ball', 'Dragon Ball Kame Hame Practising Clothing Cosplaycostume', 'costumes', 1799, 100, 'products/costumes/dragon-ball-kame-hame-practising-clothing-cosplaycostume3.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(9, 'Kagome', 'InuYasha Feudal Fairy Tale Kagome Higurashi costume5', 'costumes', 1399, 100, 'products/costumes/inuyasha-feudal-fairy-tale-kagome-higurashi-costume5.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(10, 'Kurosu Yuuki', 'Vampire Knight Day Class Girl Kurosu Yuuki Cosplay Costume', 'costumes', 1499, 100, 'products/costumes/vampire-knight-day-class-girl-kurosu-yuuki-cosplay-costumecostume1.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(11, 'Attack on Titan', 'Attack on Titan magazine', 'magazine', 500, 100, 'products/magazines/aatck-on-titan-magazine1.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(12, 'Anime', 'Anmie Magazine.', 'magazine', 500, 100, 'products/magazines/anime-magazine2.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(13, 'Otakuzine 1', 'Otakuzine magazine', 'magazine', 500, 100, 'products/magazines/otakuzine-magazine3.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(14, 'otakuzine 2', 'Otakuzine magazine.', 'magazine', 500, 100, 'products/magazines/otakuzine-magazine5.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(15, 'Fairy Tail Magazine', 'Fairy Tail', 'magazine', 500, 100, 'products/magazines/fairy-tail-magazine4.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(16, 'Dancing King Brook', 'Dancing King Brook of one piece.', 'toy', 450, 100, 'products/toys/dancing-king-brook.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(17, 'Kakashi Hatake', 'Kakashi Hatake of naruto.', 'toy', 480, 100, 'products/toys/kakashi-hatake.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(18, 'Nightmare Luffy', 'Nightmare Luffy of One Piece.', 'toy', 550, 100, 'products/toys/nightmare-luffy.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(19, 'Shanks', 'Shanks of One Piece.', 'toy', 450, 100, 'products/toys/shanks.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(20, 'Trafalgar', 'Trafalgar of One Piece.', 'toy', 450, 100, 'products/toys/trafalgar.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(21, 'Naruto 1', 'Naruto collectibles', 'collectibles', 700, 100, 'products/collectibles/naruto-collectible1.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(22, 'Naruto 2', 'naruto collectibles', 'collectibles', 900, 100, 'products/collectibles/naruto-collectible2.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(23, 'Lucy of fairy tail', 'Lucy of fairy tail collectible', 'collectibles', 300, 100, 'products/collectibles/lucy-fairy-tail-collectible3.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(24, 'D Grey Man', 'D Grey Man collectibles', 'collectibles', 1100, 100, 'products/collectibles/d-grey-man-collectible4.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(25, 'Oone piece', 'One Piece collectibles', 'collectibles', 700, 1500, 'products/collectibles/one-piece-collectible5.jpg', '2015-02-20 06:00:45', NULL, NULL),
+(26, 'Multi Color Beautiful Lolita Wig', '60cm-Long-Multi-Color-Beautiful-lolita-wig-Anime-Wig', 'wigs', 1400, 100, 'products/wigs/60cm-long-multi-color-beautiful-lolita-wig-anime-wig.jpg', '2015-02-20 06:00:46', NULL, NULL),
+(27, 'Charm Punk Rock Wig', '75cm Charm punk rock Blue-white Short inlay Long Tress Cosplay Wig Anime', 'wigs', 1800, 100, 'products/wigs/75cm-charm-punk-rock-blue-white-short-inlay-long-tress-cosplay-wig-anime.jpg', '2015-02-20 06:00:46', NULL, NULL),
+(28, 'Silk tower gold wig', '100cm long umineko no naku koro ni thank silk tower gold', 'wigs', 2300, 100, 'products/wigs/100cm-long-umineko-no-naku-koro-ni-thank-silk-tower-gold.jpg', '2015-02-20 06:00:46', NULL, NULL),
+(29, 'Magic Flute Magi Moerjianuo Wig', 'Nice!', 'wigs', 1200, 100, 'products/wigs/magic-flute-magi-moerjianuo-wig.jpg', '2015-02-20 06:00:46', NULL, NULL),
+(30, 'silvery comb ming anna sesshoumaru hair wig', 'silvery comb ming anna sesshoumaru 100cm long straight hair wig', 'wigs', 2400, 100, 'products/wigs/silvery-comb-ming-anna-sesshoumaru-100cm-long-straight-hair-wig.jpg', '2015-02-20 06:00:46', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -165,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 INSERT INTO `users` (`user_id`, `email`, `firstname`, `lastname`, `password`, `image`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'ianolinaresgmail.com', 'sample', 'sampls', 'password', '', '2015-02-08 00:00:00', '2015-02-08 10:13:50', '2015-02-08 10:14:53'),
 (2, 'ianolinares@gmail.com', 'sample', 'sampls', 'password', '', '2015-02-08 09:59:12', NULL, NULL),
-(3, 'ianolinares@ymail.com', 'Ian', 'Olinares', '55c3b5386c486feb662a0785f340938f518d547f', '', '2015-02-08 16:04:53', NULL, NULL),
+(3, 'ianolinares@ymail.com', 'Signe', 'Richard', '55c3b5386c486feb662a0785f340938f518d547f', '', '2015-02-08 16:04:53', '2015-02-20 02:27:54', NULL),
 (4, 'zolo@gmail.com', 'Stephanie', 'Lowery', '92432e7c66519c4e404d347718ffe641a658ac7e', '', '2015-02-09 06:05:20', NULL, NULL),
 (6, 'zolso@gmail.com', 'Stephanie', 'Lowery', '92432e7c66519c4e404d347718ffe641a658ac7e', '', '2015-02-09 06:18:40', NULL, NULL),
 (8, 'hawyhysok@yahoo.com', 'Kevyn', 'Boone', '92432e7c66519c4e404d347718ffe641a658ac7e', '', '2015-02-09 06:21:35', NULL, NULL),
