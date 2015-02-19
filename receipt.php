@@ -17,7 +17,7 @@
 				$orders = json_decode(Orders::findByUserCartId($row));
 				$total = 0;
 	?>
-	<div class="text-center" id="back-button" style="padding:20px;"><a href="account.php" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Back</a> <button type="button" id="print-btn" class="btn btn-success">Print <i class="fa fa-print"></i></button> </div>
+	<div class="text-center" id="back-button" style="padding:20px;"><a href="account.php" class="btn btn-black"><i class="fa fa-arrow-left"></i> Back</a> <button type="button" id="print-btn" class="btn btn-success">Print <i class="fa fa-print"></i></button> </div>
 	<div id="printdiv" class="container">
 		<div style="padding:50px;border:1px solid #000;" class="row">
 			

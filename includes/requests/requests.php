@@ -88,3 +88,27 @@ if(isset($_POST['final_checkout']))
 	$_SESSION['cart'] = [];
 	$_SESSION['cart_counter'] = 0;
 }
+
+
+if(isset($_POST['change_password']))
+{
+	$checkPass = json_decode(Auth::checkPassword($_POST));
+
+	if($checkPass != null)
+	{
+		Auth::changePassword($_POST);
+		print_r(json_encode(array("success"=>true)));		
+	}
+	else{
+		print_r(json_encode(array("success"=>false)));		
+	}
+	// print_r($checkPass);
+}
+
+if(isset($_POST['change_profile']))
+{
+	session_start();
+	$_SESSION['user'][0]['firstname'] = $_POST['firstname'];
+	$_SESSION['user'][0]['lastname'] = $_POST['lastname'];
+	print_r(Auth::changeProfile($_POST));
+}

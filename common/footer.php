@@ -271,6 +271,67 @@
 			return false;
 		});
 
+
+		$("#profile-form").on('submit', function(e){
+			e.preventDefault();
+			that = $(this);
+			lastname = that.find('[name=lastname]').val();
+			firstname = that.find('[name=firstname]').val();
+			$.ajax({
+	              url: 'includes/requests/requests.php',
+	              type: 'POST',
+	              data: $(this).serialize(),
+	              dataType: 'json',
+	              success: function(results){
+					console.log(results);
+	               
+					if(results.success === true){
+
+						$('.user-profile-name').html(firstname +' '+lastname);
+						$(that)[0].reset();
+						alert('Successfully Changed!');
+					}
+	              },
+	              complete:function(){
+	                // $(".loader").fadeOut('slow');
+	                //loader stop here.
+	              }
+	        });
+			return false;
+		});
+		$("#password-form").on('submit', function(e){
+			e.preventDefault();
+			that = $(this);
+
+			pword = that.find('[name=password]').val();
+			rpword = that.find('[name=repassword]').val();
+			if(pword == rpword)
+				$.ajax({
+		              url: 'includes/requests/requests.php',
+		              type: 'POST',
+		              data: $(this).serialize(),
+		              dataType: 'json',
+		              success: function(results){
+						console.log(results);
+		               
+						if(results.success === true){
+							$(that)[0].reset();
+							alert('Successfully Changed!');
+						}
+						else{
+							alert('Invalid password');
+						}
+		              },
+		              complete:function(){
+		                // $(".loader").fadeOut('slow');
+		                //loader stop here.
+		              }
+		        });
+		     else
+		     alert("New password and retype new password doesn't match!");
+			return false;
+		});
+
 		var offset = 220;
 	    var duration = 500;
 	    jQuery(window).scroll(function() {
